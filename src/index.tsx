@@ -122,7 +122,7 @@ const LazyHydrate: React.FunctionComponent<Props> = function(props) {
 
   if (hydrated) {
     return (
-      <div ref={childRef} style={{ display: "contents" }} {...rest}>
+      <div ref={childRef} style={{ display: "block", display: "contents" }} {...rest}>
         {children}
       </div>
     );
@@ -130,7 +130,7 @@ const LazyHydrate: React.FunctionComponent<Props> = function(props) {
     return (
       <div
         ref={childRef}
-        style={{ display: "contents" }}
+        style={{ display: "block", display: "contents" }}
         suppressHydrationWarning
         {...rest}
         dangerouslySetInnerHTML={{ __html: "" }}
